@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Spotify.Models.db.Cancion>
+
+@{
+    ViewData["Title"] = "Lista de Canciones";
+}
+
+<head>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" type="text/css" href="/css/admin/styles.css">
+</head>
+
+<body>
+    <h1>@ViewData["Title"]</h1>
+    <div id="search-form">
+    <form asp-action="Index" method="get">
+        <input type="text" id="searchInput" name="searchString" class="buscarInput" placeholder="Buscar por Título, Artista, Álbum, Género" />
+        <button type="submit" class="buscarButton slide_right" id="buscarButton">Buscar</button>
+    </form>
+</div>
+
+        <button class="agregarButton slide_right" data-action="Create" id="agregarButton">Agregar Canción</button>
+
+    <div id="canciones-grid">
+
+        @foreach (var item in Model)
+        {
+            <div class="cancion">
+                <img src="@item.Portada" alt="Portada de @item.Titulo">
+                <div class="info">
+                    <h2>@item.Titulo</h2>
+                    <p>Intérprete: @item.Interprete</p>
+                    <p>Álbum: @item.Album</p>
+                    <p>Género: @item.Genero</p>
+                    <p>Año: @item.Anio</p>
+                    <button class="update-button" data-action="Edit" data-id="@item.Id">Editar</button>
+                    <button class="delete-button" data-action="Delete" data-id="@item.Id">Borrar</button>
+                </div>
+            </div>
+        }
+    </div>
+
+    <script src="/js/botones.js"></script>
+</body>

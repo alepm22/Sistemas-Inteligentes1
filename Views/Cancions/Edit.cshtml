@@ -1,0 +1,63 @@
+﻿@model Spotify.Models.db.Cancion
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/admin/edit.css">
+</head>
+<div class="header-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Spotify.png/768px-Spotify.png" alt="Spotify Logo" class="spotify-logo">
+    <h1>Editar</h1>
+</div>
+<h4>Cancion</h4>
+<div>
+    <a asp-action="Index">R E G R E S A R</a>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Titulo" class="control-label"></label>
+                <input asp-for="Titulo" class="form-control" />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Interprete" class="control-label"></label>
+                <input asp-for="Interprete" class="form-control" />
+                <span asp-validation-for="Interprete" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Album" class="control-label"></label>
+                <input asp-for="Album" class="form-control" />
+                <span asp-validation-for="Album" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Genero" class="control-label"></label>
+                <input asp-for="Genero" class="form-control" />
+                <span asp-validation-for="Genero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Anio" class="control-label"></label>
+                <input asp-for="Anio" class="form-control" />
+                <span asp-validation-for="Anio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Portada" class="control-label"></label>
+                <input asp-for="Portada" class="form-control" />
+                <span asp-validation-for="Portada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

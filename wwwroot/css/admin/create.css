@@ -1,0 +1,47 @@
+/* create.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Color de fondo oscuro */
+    color: #ffffff;
+}
+.header-container {
+    text-align: center;
+}
+
+.spotify-logo {
+    width: 150px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+h1, h4, a {
+    color: #1db954; /* Color de Spotify */
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff; /* Letras blancas */
+}
+
+.form-control {
+    border: 5px solid #1db954; /* Borde grueso y color de Spotify */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px; /* Ajuste del espacio interno */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #ffffff; /* Letras blancas */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+.btn-primary {
+    background-color: #1db954; /* Fondo verde de Spotify para el botón */
+    color: #ffffff; /* Letras blancas */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #177d3e; /* Cambio de color al pasar el ratón */
+}

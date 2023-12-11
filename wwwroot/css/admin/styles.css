@@ -1,0 +1,120 @@
+body {
+    background-color: #1a1a1a; /* Fondo negro para todo el cuerpo */
+    color: #ffffff; /* Texto blanco */
+    font-family: "Roboto", sans-serif; /* Cambiar a Roboto */
+}
+
+#canciones-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cancion {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    background-color: #333; /* Color de fondo más oscuro para las canciones */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Sombra con colores invertidos */
+}
+
+.cancion img {
+    width: 100%; /* Hacer que todas las imágenes tengan el mismo ancho */
+    height: 300px; /* Altura fija */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cancion .info {
+    margin-left: 20px; /* Espacio entre la imagen y la información */
+}
+
+.cancion h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+    color: #ffffff; /* Blanco para el título */
+}
+
+.cancion p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.cancion button {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+    background-color: #1db954; /* Verde Spotify para los botones */
+    color: #1d1d1d;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 20px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s, font-size 0.3s; /* Agregado efecto de transición */
+}
+
+.cancion button:hover {
+    background-color: #177d3e; /* Cambio de color al pasar el ratón */
+    font-size: 20px; /* Incremento de tamaño al pasar el ratón */
+}
+
+#agregarButton.slide_right,
+#aceptarAgregar {
+    color: #030303;
+    border: 2px solid 312f30;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: #1db954; /* Verde Spotify para el botón */
+    border-radius: 0px;
+    padding: 10px 36px;
+    font-family: "Roboto", sans-serif; /* Cambiar a Roboto */
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: ease-out 0.4s;
+}
+
+#agregarButton.slide_right:hover,
+#aceptarAgregar:hover {
+    box-shadow: inset 500px 0 0 0 rgb(20, 139, 56);
+    color: #ffffff;
+    font-size: 18px;
+}
+
+#buscarButton.slide_right {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+    background-color: #ffffff; /* Verde Spotify para los botones */
+    color: #1d1d1d;
+    border: none;
+    border-radius: 20px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: ease-out 0.4s;
+}
+
+#buscarButton.slide_right:hover {
+    box-shadow: inset 500px 0 0 0 #1db954;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.buscarInput {
+    padding: 10px; /* Ajustar el relleno del campo de entrada */
+    font-size: 16px; /* Ajustar el tamaño de la fuente */
+    background-color: #222; /* Color de fondo similar al resto de la página */
+    color: #ffffff; /* Texto blanco */
+    border: 1px solid #444; /* Borde similar al resto de los campos */
+    border-radius: 5px 0 0 5px; /* Bordes redondeados (solo a la izquierda) */
+    width: 300px; /* Ajustar el ancho según tus necesidades */
+}
+
+.buscarInput::placeholder {
+    color: #888; /* Color del marcador de posición */
+}
+

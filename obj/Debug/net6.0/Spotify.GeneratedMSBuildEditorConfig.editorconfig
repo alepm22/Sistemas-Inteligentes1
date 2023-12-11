@@ -1,0 +1,105 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Spotify
+build_property.RootNamespace = Spotify
+build_property.ProjectDir = D:\Users\afuhe\Desktop\Proyecto\Spotify\Spotify\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Users\afuhe\Desktop\Proyecto\Spotify\Spotify
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/Cancions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuY2lvbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/Cancions/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuY2lvbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/Cancions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuY2lvbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/Cancions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuY2lvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/Playlists/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWxpc3RzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/Playlists/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWxpc3RzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/Playlists/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWxpc3RzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/Playlists/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWxpc3RzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/Playlists/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWxpc3RzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/Usuarios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/Usuarios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/Usuarios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/Usuarios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/Usuarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/Usuarios/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/afuhe/Desktop/Proyecto/Spotify/Spotify/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ciwr53d3e7

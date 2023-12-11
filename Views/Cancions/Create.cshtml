@@ -1,0 +1,66 @@
+﻿@model Spotify.Models.db.Cancion
+
+@{
+    ViewData["Title"] = "Create";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/admin/create.css">
+</head>
+
+<div class="container mt-5">
+    <div class="header-container text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Spotify.png/768px-Spotify.png" alt="Spotify Logo" class="spotify-logo">
+        <h1 class="mt-3">Agregar Nueva Canción</h1>
+    </div>
+
+    <h4>Cancion</h4>
+    <hr />
+    <div class="row">
+    <div class="col-md-6 offset-md-3">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Titulo" class="control-label"></label>
+                <input asp-for="Titulo" class="form-control" />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Interprete" class="control-label"></label>
+                <input asp-for="Interprete" class="form-control" />
+                <span asp-validation-for="Interprete" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Album" class="control-label"></label>
+                <input asp-for="Album" class="form-control" />
+                <span asp-validation-for="Album" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Genero" class="control-label"></label>
+                <input asp-for="Genero" class="form-control" />
+                <span asp-validation-for="Genero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Anio" class="control-label"></label>
+                <input asp-for="Anio" class="form-control" />
+                <span asp-validation-for="Anio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Portada" class="control-label"></label>
+                <input asp-for="Portada" class="form-control" />
+                <span asp-validation-for="Portada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+  </div>
+
+    <div class="mt-3">
+        <a asp-action="Index" class="btn btn-secondary">Volver a la Lista</a>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

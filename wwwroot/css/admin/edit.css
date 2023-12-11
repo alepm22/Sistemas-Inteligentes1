@@ -1,0 +1,89 @@
+/* Estilos generales */
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+}
+
+.header-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    margin-bottom: 20px; /* Ajusta según tus preferencias */
+}
+
+.spotify-logo {
+    width: 60px; /* Ajusta el ancho según tus preferencias */
+    height: auto; /* Hace que la altura se ajuste automáticamente manteniendo la proporción */
+    margin-right: 10px; /* Ajusta el margen derecho según tus preferencias */
+}
+
+h1, h4 {
+    color: #1db954;
+    margin-right: 10px; /* Centrar el texto */
+}
+
+
+.row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Centrar el contenido horizontalmente */
+}
+
+/* Formulario de edición */
+.col-md-4 {
+    width: 50%; /* Ancho del formulario */
+    text-align: left; /* Alinear el texto a la izquierda */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.form-control {
+    background-color: #222;
+    color: #000000;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px; /* Ajustar el tamaño de la fuente */
+    color: #ffffff;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Botón de Guardar */
+.btn-primary {
+    background-color: #1db954;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px; /* Ajustar el relleno */
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s, font-size 0.3s;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #177d3e;
+    font-size: 20px; /* Ajustar el tamaño de la fuente al pasar el ratón */
+    font-weight: bold;
+}
+
+/* Volver a la lista */
+a {
+    color: #1db954;
+    display: block; /* Para centrar en el espacio disponible */
+    text-align: center; /* Centrar el texto */
+    margin-top: 20px; /* Añadir espacio en la parte superior */
+}
+
+a:hover {
+    text-decoration: underline;
+}

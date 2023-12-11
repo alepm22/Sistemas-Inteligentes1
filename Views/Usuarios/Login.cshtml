@@ -1,0 +1,25 @@
+@model Spotify.Models.LoginViewModel
+<head>
+    <title>Spotify</title>
+    <link rel="stylesheet" type="text/css" href="/css/spotify.css">
+    <!-- Agrega cualquier otro estilo necesario para tu diseño -->
+</head>
+<div class="container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Spotify.png/768px-Spotify.png" alt="Spotify Logo" class="spotify-logo">
+    <h1>Spotify</h1>
+    <div class="form-container">
+       <!-- Formulario de Login -->
+        <form asp-action="Login" method="post">
+            <!-- Agrega campos para email/username y contraseña según tu necesidad -->
+            <div class="form-group">
+                <label for="inputEmail">Email/Username</label>
+                <input asp-for="UsernameOrEmail" class="form-control" placeholder="Ingresa tu email o username" required>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword">Contraseña</label>
+                <input asp-for="Password" type="password" class="form-control" placeholder="Ingresa tu contraseña" required>
+            </div>
+            <button type="submit" id="btn-spotify" class="slide_right">Iniciar Sesión</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+body {
+    background-color: #121212; /* Negro */
+    color: #ffffff; /* Verde Spotify */
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.song-container {
+    display: flex;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el contenedor */
+}
+
+.song-container:hover {
+    background-color: #333; /* Gris oscuro al hacer hover */
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-right: 10px; /* Añade espacio entre la imagen y el texto */
+}
+
+.song-info {
+    display: flex;
+    flex-direction: column;
+}
+h3 {
+    color: #ffffff; /* Texto en verde por defecto */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color del texto */
+}
+
+.song-container:hover h3 {
+    color: #1DB954; /* Cambia el color del texto al blanco al hacer hover */
+    font-size: 30px;
+}
+
+.artist-name {
+    margin-top: 5px; /* Añade espacio entre el título y el intérprete */
+}

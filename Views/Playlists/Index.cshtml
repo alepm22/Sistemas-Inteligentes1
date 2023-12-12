@@ -1,47 +1,65 @@
-﻿@model IEnumerable<Spotify.Models.db.Playlist>
+﻿@model Spotify.Models.db.IndexViewModel
 
 @{
     ViewData["Title"] = "Index";
 }
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/playlist.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido a SPOTIFY</h1>
 
-<h1>Index</h1>
+        <p>
+            <a asp-action="Create" class="btn-create">Create New</a>
+        </p>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descripcion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdusuarioNavigation)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descripcion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdusuarioNavigation.Id)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Playlist</th>
+                    <th id="expand-header"></th>
+                    <th>
+                        <button id="expand-button">Mostrar Todo+</button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Playlists)
+                {
+                    <tr class="playlist-item" data-description="@Html.DisplayFor(modelItem => item.Descripcion)">
+                        <td class="playlist-cell">
+                            <img src="https://i.redd.it/811x78sjhyy11.jpg" alt="Playlist Image" class="playlist-image" />
+                            <div class="name">@Html.DisplayFor(modelItem => item.Nombre)</div>
+                            <div class="playlist-info">
+                                <div class="playlist-name">@Html.DisplayFor(modelItem => item.Nombre)</div>
+                                <div class="playlist-description">@Html.DisplayFor(modelItem => item.Descripcion)</div>
+                                <button class="view-button" data-action="ViewSongs" data-id="@item.Id">Ver Playlists</button>
+
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <h1>Hola de nuevo!, música que te podría gustar:</h1>
+
+        <div class="songs-container">
+            @foreach (var item in Model.RandomSongs)
+            {
+                <div class="song-item">
+                    <button class="btn-add-to-playlist">Agregar a Playlist</button>
+                    <h3>@item.Titulo</h3>
+                    <img src="@item.Portada" alt="Portada de @item.Titulo" class="song-image">
+                    <p>Intérprete: @item.Interprete</p>
+                    <button class="btn-play">▶</button>
+                </div>
+            }
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/js/playlist.js"></script>
+    <script src="/js/pbotones.js"></script>
+</body>

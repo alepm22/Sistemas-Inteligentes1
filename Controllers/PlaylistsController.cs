@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Spotify.Models.db;
+using Spotify.Models;
 
 namespace Spotify.Controllers
 {
@@ -19,11 +20,34 @@ namespace Spotify.Controllers
         }
 
         // GET: Playlists
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? userId)
+    {
+        if (userId == null)
         {
-            var spotifyContext = _context.Playlists.Include(p => p.IdusuarioNavigation);
-            return View(await spotifyContext.ToListAsync());
+            return NotFound();
         }
+
+        var playlists = await _context.Playlists
+            .Where(p => p.Idusuario == userId)
+            .Include(p => p.IdusuarioNavigation)
+            .ToListAsync();
+
+        int totalSongs = await _context.Cancions.CountAsync();  // Cambia a Cancions
+
+        var randomSongs = await _context.Cancions  // Cambia a Cancions
+            .OrderBy(c => Guid.NewGuid())
+            .Take(6)
+            .ToListAsync();
+
+        var viewModel = new IndexViewModel
+        {
+            Playlists = playlists,
+            RandomSongs = randomSongs
+        };
+
+        return View(viewModel);
+    }
+
 
         // GET: Playlists/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -163,5 +187,26 @@ namespace Spotify.Controllers
         {
           return (_context.Playlists?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+        // GET: Playlists/ViewSongs/5
+        public async Task<IActionResult> ViewSongs(int? id)
+        {
+            if (id == null || _context.Playlists == null)
+            {
+                return NotFound();
+            }
+
+            var playlist = await _context.Playlists
+                .Include(p => p.IdusuarioNavigation)
+                .Include(p => p.Idcancions) // Incluye las canciones relacionadas
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (playlist == null)
+            {
+                return NotFound();
+            }
+
+            return View(playlist);
+        }
+
     }
 }

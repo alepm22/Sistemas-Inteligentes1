@@ -182,6 +182,10 @@ namespace Spotify.Controllers
                 {
                     return RedirectToAction("Index", "Cancions");
                 }
+                else
+                {
+                    return RedirectToAction("Index", "Playlists", new { userId = usuario.Id });
+                }
             }
             ModelState.AddModelError(string.Empty, "Credenciales no válidas. Inténtalo de nuevo.");
         }

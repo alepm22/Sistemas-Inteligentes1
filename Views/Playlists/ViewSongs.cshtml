@@ -1,0 +1,22 @@
+@model Spotify.Models.db.Playlist
+<head>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/Playlistview.css" />
+</head>
+<body>
+    <h1>Canciones en la Playlist: @Model.Nombre</h1>
+    <a class="btn btn-secondary" asp-action="Index" asp-route-userId="@Model.Idusuario">Volver a la lista de playlists</a>
+    @foreach (var cancion in Model.Idcancions)
+    {
+        <div class="song-container">
+            <img src="@cancion.Portada" alt="Portada de @cancion.Titulo" width="200" height="200">
+            <div class="song-info">
+                <h3>@cancion.Titulo</h3>
+                <p class="artist-name">@cancion.Interprete</p>
+            </div>
+        </div>
+    }
+</body>
+
+
+

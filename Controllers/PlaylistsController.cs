@@ -20,34 +20,36 @@ namespace Spotify.Controllers
         }
 
         // GET: Playlists
-        public async Task<IActionResult> Index(int? userId)
+    public async Task<IActionResult> Index(int? userId)
+{
+    if (userId == null)
     {
-        if (userId == null)
-        {
-            return NotFound();
-        }
-
-        var playlists = await _context.Playlists
-            .Where(p => p.Idusuario == userId)
-            .Include(p => p.IdusuarioNavigation)
-            .ToListAsync();
-
-        int totalSongs = await _context.Cancions.CountAsync();  // Cambia a Cancions
-
-        var randomSongs = await _context.Cancions  // Cambia a Cancions
-            .OrderBy(c => Guid.NewGuid())
-            .Take(6)
-            .ToListAsync();
-
-        var viewModel = new IndexViewModel
-        {
-            Playlists = playlists,
-            RandomSongs = randomSongs
-        };
-
-        return View(viewModel);
+        return NotFound();
     }
 
+    var playlists = await _context.Playlists
+        .Where(p => p.Idusuario == userId)
+        .Include(p => p.IdusuarioNavigation)
+        .ToListAsync();
+
+    int totalSongs = await _context.Cancions.CountAsync();
+
+    // Obtén todas las canciones
+    var allSongs = await _context.Cancions.ToListAsync();
+
+    // Baraja las canciones de manera aleatoria
+    var shuffledSongs = allSongs.OrderBy(c => Guid.NewGuid()).ToList();
+
+    // Toma las primeras 6 canciones (o menos si no hay suficientes)
+    var randomSongs = shuffledSongs.Take(6).ToList();
+    var viewModel = new IndexViewModel
+    {
+        Playlists = playlists,
+        RandomSongs = randomSongs
+    };
+
+    return View(viewModel);
+}
 
         // GET: Playlists/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -67,7 +69,6 @@ namespace Spotify.Controllers
 
             return View(playlist);
         }
-
         // GET: Playlists/Create
         public IActionResult Create()
         {
@@ -207,6 +208,37 @@ namespace Spotify.Controllers
 
             return View(playlist);
         }
+        [HttpPost]
+    public async Task<IActionResult> AddToPlaylist(int? cancionId, int? playlistId)
+    {
+        if (cancionId == null || playlistId == null)
+        {
+            return NotFound();
+        }
+
+        var playlist = await _context.Playlists
+            .Include(p => p.Idcancions)
+            .FirstOrDefaultAsync(p => p.Id == playlistId);
+
+        if (playlist == null)
+        {
+            return NotFound();
+        }
+
+        var cancion = await _context.Cancions.FindAsync(cancionId);
+        if (cancion != null)
+        {
+            // Asegúrate de que la canción no esté ya en la playlist
+            if (!playlist.Idcancions.Any(c => c.Id == cancionId))
+            {
+                playlist.Idcancions.Add(cancion);
+                await _context.SaveChangesAsync();
+            }
+        }
+        // Redirige a la página de index o a donde desees
+        return RedirectToAction("Index", new { userId = playlist.Idusuario });
+    }
+
 
     }
 }

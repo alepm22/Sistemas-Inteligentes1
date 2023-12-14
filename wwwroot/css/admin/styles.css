@@ -3,6 +3,53 @@ body {
     color: #ffffff; /* Texto blanco */
     font-family: "Roboto", sans-serif; /* Cambiar a Roboto */
 }
+header {
+    background-color: black; /* Cambia el color de fondo según tus preferencias */
+    padding: 2px 0; /* Altura del borde superior */
+}
+
+
+
+.header-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    margin-bottom: 20px; /* Ajusta según tus preferencias */
+  
+}
+
+
+.header-content .logo {
+    display: flex;
+    align-items: center;
+}
+
+    .header-content .logo img {
+        width: 66px;
+        height: auto;
+        margin-right: 3px;
+    }
+
+
+.spotify-logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px; /* Espacio a la derecha del logo */
+}
+
+h1 {
+    display: block;
+    font-family: 'Roboto', sans-serif; /* Utiliza la fuente Roboto para las etiquetas */
+    font-size: 27px;
+    max-width: 900px;
+    margin-bottom: 25px;
+}
+
+h4 {
+    color: #ffffff;
+    font-size: 1rem; /* Cambia el tamaño del texto según tus preferencias */
+    
+}
+
 
 #canciones-grid {
     display: flex;
@@ -96,6 +143,7 @@ body {
     border-radius: 20px; /* Bordes redondeados */
     cursor: pointer;
     transition: ease-out 0.4s;
+    margin-left: auto;
 }
 
 #buscarButton.slide_right:hover {
@@ -111,10 +159,44 @@ body {
     color: #ffffff; /* Texto blanco */
     border: 1px solid #444; /* Borde similar al resto de los campos */
     border-radius: 5px 0 0 5px; /* Bordes redondeados (solo a la izquierda) */
-    width: 300px; /* Ajustar el ancho según tus necesidades */
+    width: 600px; /* Ajustar el ancho según tus necesidades */
+    margin: 10px auto 0;
+    margin-left: 300px; /* Ajustar el margen izquierdo */
 }
 
 .buscarInput::placeholder {
     color: #888; /* Color del marcador de posición */
+}
+
+/* Estilo de la sección de características */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    background-color: #101010d8;
+    margin-top: 20px; /* Incrementar el valor para más espacio */
+}
+
+.feature {
+    text-align: center;
+}
+
+h2 {
+    color: #1db954;
+    font-size: 1rem; /* Cambia el tamaño del texto según tus preferencias */
+  
+}
+h3 {
+    color: #888;
+    font-size: 1rem; /* Cambia el tamaño del texto según tus preferencias */
+    align-items: center;
+}
+
+footer {
+    background-color: black;
+    color: #888;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: -10px;
 }
 

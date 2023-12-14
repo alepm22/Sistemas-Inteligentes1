@@ -4,22 +4,56 @@ body {
     color: #ffffff;
     font-family: "Roboto", sans-serif;
 }
-
-.header-container {
+header {
+    background-color: black; /* Cambia el color de fondo según tus preferencias */
+    padding: 2px 0; /* Altura del borde superior */
+}
+.header-content {
     display: flex;
-    align-items: center; /* Alinea verticalmente los elementos en el centro */
-    margin-bottom: 20px; /* Ajusta según tus preferencias */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+header b {
+    color: #ffffff; /* Cambiar al color que desees */
+    font-size: 20px;
+    margin-left: 3px; /* Agregar un margen derecho para separar los enlaces */
+}
+
+
+
+
+.header-content .logo {
+    display: flex;
+    align-items: center;
+}
+
+    .header-content .logo img {
+        width: 66px;
+        height: auto;
+        margin-right: 3px;
+    }
+
+
+h1 {
+    display: block;
+    font-family: 'Roboto', sans-serif; /* Utiliza la fuente Roboto para las etiquetas */
+    font-size: 27px;
+    max-width: 900px;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+h4 {
+    color: #ffffff;
+    font-size: 1rem; /* Cambia el tamaño del texto según tus preferencias */
 }
 
 .spotify-logo {
     width: 60px; /* Ajusta el ancho según tus preferencias */
     height: auto; /* Hace que la altura se ajuste automáticamente manteniendo la proporción */
     margin-right: 10px; /* Ajusta el margen derecho según tus preferencias */
-}
-
-h1, h4 {
-    color: #ff4444; /* Rojo para el encabezado y subtítulos */
-    margin-right: 10px; /* Centrar el texto */
 }
 
 .row {
@@ -34,32 +68,40 @@ h1, h4 {
 }
 
 /* Botón de Borrar */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .btn-danger {
-    background-color: #ff4444; /* Rojo para el botón de borrar */
+    background-color: #1db954;
     border: none;
     border-radius: 5px;
-    padding: 15px 30px; /* Ajustar el relleno */
+    padding: 13px 50px;
     cursor: pointer;
     font-size: 15px;
     transition: background-color 0.3s, font-size 0.3s;
     font-weight: bold;
+    margin-left: 600px; /* Ajusta el margen superior según tus preferencias */
 }
 
+
 .btn-danger:hover {
-    background-color: #cc0000; /* Cambio de color al pasar el ratón */
-    font-size: 20px; /* Ajustar el tamaño de la fuente al pasar el ratón */
+    background-color: #ff0000; /* Cambio de color al pasar el ratón */
+    font-size: 18px; /* Ajustar el tamaño de la fuente al pasar el ratón */
     font-weight: bold;
 }
 
 /* Volver a la lista */
-a {
+b {
     color: #1db954;
     display: block; /* Para centrar en el espacio disponible */
     text-align: center; /* Centrar el texto */
-    margin-top: 20px; /* Añadir espacio en la parte superior */
+    margin-left: 3px; /* Añadir espacio en la parte superior */
 }
 
-a:hover {
+b:hover {
     text-decoration: underline;
 }
 
@@ -71,15 +113,40 @@ a:hover {
 
 .info-item {
     flex: 0 0 48%; /* Ajusta según tus preferencias */
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 dt {
     font-weight: bold;
     color: #1db954;
-    margin-bottom: 5px;
+    margin: 20px 20px 10px 150px;
+    font-size: 18px;
 }
 
 dd {
-    margin: 0 0 0 15px;
+    margin: 3px 3px 0px 150px;
+    font-size: 17px;
+}
+
+
+
+h2 {
+    color: #1db954;
+    font-size: 1rem; /* Cambia el tamaño del texto según tus preferencias */
+}
+
+h3 {
+    color: #888;
+    font-size: 1rem; /* Cambia el tamaño del texto según tus preferencias */
+    align-items: center;
+}
+
+footer {
+    background-color: black;
+    color: #888;
+    text-align: center;
+    padding: 18px 0;
+    margin-top: 130px; /* Ajusta este valor para cambiar la posición vertical del footer */
+    width: 100%; /* Establece el ancho al 100% del contenedor padre */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho total */
 }

@@ -4,6 +4,11 @@ body {
     color: #ffffff;
     font-family: "Roboto", sans-serif;
 }
+header {
+    background-color: black; /* Cambia el color de fondo según tus preferencias */
+    padding: 2px 0; /* Altura del borde superior */
+}
+
 
 .header-container {
     display: flex;
@@ -11,27 +16,59 @@ body {
     margin-bottom: 20px; /* Ajusta según tus preferencias */
 }
 
+
+
+.header-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    margin-bottom: 20px; /* Ajusta según tus preferencias */
+}
+
+
+.header-content .logo {
+    display: flex;
+    align-items: center;
+}
+
+    .header-content .logo img {
+        width: 66px;
+        height: auto;
+        margin-right: 3px;
+    }
+
+
+
 .spotify-logo {
     width: 60px; /* Ajusta el ancho según tus preferencias */
     height: auto; /* Hace que la altura se ajuste automáticamente manteniendo la proporción */
     margin-right: 10px; /* Ajusta el margen derecho según tus preferencias */
 }
 
-h1, h4 {
-    color: #1db954;
-    margin-right: 10px; /* Centrar el texto */
+h1 {
+    display: block;
+    font-family: 'Roboto', sans-serif; /* Utiliza la fuente Roboto para las etiquetas */
+    font-size: 27px;
+    max-width: 900px;
+    margin-bottom: 25px;
+    color:#ffffff;
+}
+
+h4 {
+    color: #ffffff;
+    font-size: 1rem; /* Cambia el tamaño del texto según tus preferencias */
 }
 
 
 .row {
     margin-top: 20px;
     display: flex;
-    justify-content: center; /* Centrar el contenido horizontalmente */
+    justify-content: center;
 }
+
 
 /* Formulario de edición */
 .col-md-4 {
-    width: 50%; /* Ancho del formulario */
+    width: 30%; /* Ancho del formulario */
     text-align: left; /* Alinear el texto a la izquierda */
 }
 
@@ -52,10 +89,14 @@ h1, h4 {
 }
 
 label {
+    display: block;
+    font-family: 'Roboto', sans-serif; /* Utiliza la fuente Roboto para las etiquetas */
     font-weight: bold;
     margin-bottom: 5px;
     font-weight: bold;
     font-size: 20px;
+    text-align: left; /*Alineo el texto a la izquierda*/
+    margin-bottom: 7px;
 }
 
 /* Botón de Guardar */
@@ -78,7 +119,7 @@ label {
 
 /* Volver a la lista */
 a {
-    color: #1db954;
+    
     display: block; /* Para centrar en el espacio disponible */
     text-align: center; /* Centrar el texto */
     margin-top: 20px; /* Añadir espacio en la parte superior */
@@ -87,3 +128,36 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* Estilo de la sección de características */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    background-color: #101010d8;
+    margin-top: 20px; /* Incrementar el valor para más espacio */
+}
+
+.feature {
+    text-align: center;
+}
+
+h2 {
+    color: #1db954;
+    font-size: 1rem; /* Cambia el tamaño del texto según tus preferencias */
+}
+
+h3 {
+    color: #888;
+    font-size: 1rem; /* Cambia el tamaño del texto según tus preferencias */
+    align-items: center;
+}
+
+footer {
+    background-color: black;
+    color: #888;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: -10px;
+}
+

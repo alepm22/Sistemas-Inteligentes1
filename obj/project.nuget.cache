@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K+Q1RiLZ/qwmCV2XHJfqDiPU1ddAezEHvAL0qNcvmglTywjXnUDCxQFvy6bPGOaXznWNm9m9wJEDLq+r8J3gww==",
+  "dgSpecHash": "nPAW79NUjAgBlBFOFcFgoze6bLS4Y6G5cdtAr4y/hDq0B4Ref09xVR7hIkasDqpEx8OWc9WsAkWV8bKr5gxz9g==",
   "success": true,
-  "projectFilePath": "D:\\Users\\afuhe\\Desktop\\Proyecto\\Spotify\\Spotify.csproj",
+  "projectFilePath": "D:\\Users\\afuhe\\Desktop\\Proyecto\\Spotify\\Spotify\\Spotify.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\afuhe\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\afuhe\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\afuhe\\Desktop\\Proyecto\\Spotify\\Spotify.csproj": {}
+    "D:\\Users\\afuhe\\Desktop\\Proyecto\\Spotify\\Spotify\\Spotify.csproj": {}
   },
   "projects": {
-    "D:\\Users\\afuhe\\Desktop\\Proyecto\\Spotify\\Spotify.csproj": {
+    "D:\\Users\\afuhe\\Desktop\\Proyecto\\Spotify\\Spotify\\Spotify.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\afuhe\\Desktop\\Proyecto\\Spotify\\Spotify.csproj",
+        "projectUniqueName": "D:\\Users\\afuhe\\Desktop\\Proyecto\\Spotify\\Spotify\\Spotify.csproj",
         "projectName": "Spotify",
-        "projectPath": "D:\\Users\\afuhe\\Desktop\\Proyecto\\Spotify\\Spotify.csproj",
+        "projectPath": "D:\\Users\\afuhe\\Desktop\\Proyecto\\Spotify\\Spotify\\Spotify.csproj",
         "packagesPath": "C:\\Users\\afuhe\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\afuhe\\Desktop\\Proyecto\\Spotify\\obj\\",
+        "outputPath": "D:\\Users\\afuhe\\Desktop\\Proyecto\\Spotify\\Spotify\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\afuhe\\AppData\\Roaming\\NuGet\\NuGet.Config",

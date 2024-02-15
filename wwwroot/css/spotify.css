@@ -1,11 +1,36 @@
 body {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding-top: 50px;
-    font-family: 'Roboto', sans-serif; /* Utiliza la fuente Roboto para todo el cuerpo */
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
 }
 
+header {
+    background-color: black; /* Cambia el color de fondo según tus preferencias */
+    padding: 2px 0; /* Altura del borde superior */
+}
+
+.header-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    margin-bottom: 20px; /* Ajusta según tus preferencias */
+}
+
+
+    .header-content .logo {
+        display: flex;
+        align-items: center;
+    }
+
+        .header-content .logo img {
+            width: 66px;
+            height: auto;
+            margin-right: 3px;
+        }
+
+.main {
+    display: flex;
+    background-color: #312f30; /* Cambia el color de fondo según tus preferencias */
+}
 .container {
     display: flex;
     align-items: center;
@@ -13,11 +38,15 @@ body {
     flex-direction: column;
 }
 
+
 label {
+    display: block;
     font-family: 'Roboto', sans-serif; /* Utiliza la fuente Roboto para las etiquetas */
     color: white; /* Texto en color blanco */
-    font-size: 18px; /* Ajusta el tamaño del texto de la etiqueta */
-    
+    font-size: 13px; /* Ajusta el tamaño del texto de la etiqueta */
+    font-weight: bold;
+    text-align: left; /*Alineo el texto a la izquierda*/
+    margin-bottom: 7px;
 }
 
 .spotify-logo {
@@ -26,27 +55,35 @@ label {
     margin-right: 10px; /* Espacio a la derecha del logo */
 }
 
+
+
 h1 {
-    display: inline-block; /* Para que el título y el logo estén en la misma línea */
-    font-size: 24px; /* Ajusta el tamaño del título */
-    margin-bottom: 20px; /* Espacio inferior al título */
+    display: block;
+    font-family: 'Roboto', sans-serif; /* Utiliza la fuente Roboto para las etiquetas */
+    font-size: 27px;
+    max-width: 900px;
+    margin-bottom: 25px;
 }
 
+
 .form-container {
-    max-width: 400px;
+    max-width: 900px;
     margin: 20px auto; /* Agregado margen superior e inferior al formulario */
+    text-align:left
 }
 
 .form-group {
-    margin-bottom: 20px; /* Espacio entre cada campo del formulario */
+    margin-bottom: 25px; /* Espacio entre cada campo del formulario */
+
 }
 
 .form-control {
+    width: 100%;
     border: 3px solid #1DB954; /* Color verde de Spotify */
     border-radius: 10px; /* Bordes redondeados */
     padding: 10px;
     color: black; /* Texto en color negro */
-    font-size: 16px; /* Ajusta el tamaño del texto */
+    font-size: 15px; /* Ajusta el tamaño del texto */
 }
 
 .form-control:focus {
@@ -56,6 +93,7 @@ h1 {
 }
 
 #btn-spotify.slide_right {
+    width: 110%;
     color: #030303;
     border: 2px solid #312f30;
     background-color: #ffffff;
@@ -63,7 +101,7 @@ h1 {
     padding: 12px 36px; /* Ajusta el padding del botón */
     display: inline-block;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px; /* Ajusta el tamaño del texto del botón */
+    font-size: 14px; /* Ajusta el tamaño del texto del botón */
     letter-spacing: 1px;
     cursor: pointer;
     box-shadow: inset 0 0 0 0 #312f30;
@@ -74,6 +112,30 @@ h1 {
     box-shadow: inset 400px 0 0 0 #1DB954; /* Cambié el color a verde */
     border-radius: 10px;
     color: #000000;
-    font-size: 20px;
+    font-size: 14px;
+}
+
+
+/* Estilo del pie de página */
+h3 {
+    color: #888;
+    font-size: 1rem; /* Cambia el tamaño del texto según tus preferencias */
+    align-items: center;
+}
+footer a {
+    color: #1DB954 ; /* Cambiar al color que desees */
+    text-decoration: underline; /* Subrayar el texto */
+    margin-right: 10px; /* Agregar un margen derecho para separar los enlaces */
+}
+
+
+footer {
+    background-color: black;
+    color: #888;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 130px; /* Ajusta este valor para cambiar la posición vertical del footer */
+    width: 100%; /* Establece el ancho al 100% del contenedor padre */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho total */
 }
 

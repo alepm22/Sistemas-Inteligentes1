@@ -17,7 +17,12 @@ class CuboRubik:
         self.cubo = np.array(config)
         self.validar_cubo()
 
-   
+    def mostrar_cubo(self):
+        for index, face in enumerate(['arriba', 'frente', 'izquierda', 'derecha', 'atras', 'abajo']):
+            print(f'{face.capitalize()}')
+            for row in self.cubo[index]:
+                print(" ".join(row))
+            print("-----------------------")
 
     def validar_cubo(self):
         centros = [self.cubo[i][1][1] for i in range(6)]
@@ -108,7 +113,7 @@ class Nodo:
 
 cubo = CuboRubik()
 #cubo.cargar_configuracion("C:\Users\ALEJANDRA\Downloads\ProyectoCuboRubik-b45fd330179dc343f80d9ee79671ff4ba727a57e\Carpeta_Proyecto_Cubo_Rubik\Cubo_Desordenado.txt")
-cubo.cargar_configuracion("C:\\Users\\ALEJANDRA\\Downloads\\ProyectoCuboRubik-b45fd330179dc343f80d9ee79671ff4ba727a57e\\Carpeta_Proyecto_Cubo_Rubik\\Validar_Cubo_Centro.txt")
-#cubo.mostrar_cubo()
+cubo.cargar_configuracion("C:\\Users\\ALEJANDRA\\Downloads\\ProyectoCuboRubik-b45fd330179dc343f80d9ee79671ff4ba727a57e\\Carpeta_Proyecto_Cubo_Rubik\\Cubo_Desordenado.txt")
+cubo.mostrar_cubo()
 cubo = CuboRubik()
 cubo.resolver()
